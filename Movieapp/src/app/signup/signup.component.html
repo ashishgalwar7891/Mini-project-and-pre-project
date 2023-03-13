@@ -1,0 +1,27 @@
+<div class="cards">
+<h1>Signup Form</h1>
+<br>
+<form [formGroup]="signupForm" (ngSubmit)="sendSignupData()">
+    <label>User Name</label>
+     <input type="text" formControlName="userName"/>
+    <br>
+    <br>
+    <label>Email Id </label>
+    <input type="text" formControlName="emailId"/>
+    <br>
+    <br>
+    <label>Password </label>
+    <input type="password" formControlName="password"/>
+    <br>
+    <br>
+    <label>Mobile No.</label>
+    <input type="number" formControlName="mobileNo"/>
+    <br>
+    <br>
+    <label>Address </label>
+    <input type="text" formControlName="address"/>
+    <br><br>
+    <input type="submit" class="btn btn-primary" value="SignUp"/>
+</form>
+</div>
+

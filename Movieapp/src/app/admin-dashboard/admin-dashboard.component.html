@@ -1,0 +1,76 @@
+
+
+  <h1>Admin panel</h1>
+  <hr>
+<div id="adding" class="containers">
+<h2 class="bro">Add New Movie</h2>
+<form [formGroup]="MovieForm" (ngSubmit)="sendMovieData()">
+    <label>Movie ID</label>
+    <input type="text" formControlName="movieId"/>
+    <br>
+    <br>
+    <label>Name</label>
+    <input type="text" formControlName="name"/>
+    <br><br>
+    <label>Description</label>
+    <input type="text" formControlName="desc"/>
+    <br><br>
+    <label>Year of Release</label>
+    <input type="number" formControlName="yor"/>
+    <br><br>
+    <input type="submit" class="btn btn-info" id="add" value="Add Movie"/>
+</form>
+</div>
+<br>
+<hr>
+<!-- <a routerLink = "/notfound" >click here</a> -->
+
+
+<table class="table">
+    <thead style="color: rgb(19, 19, 19);">
+        <th>Movie ID</th>
+        <th>Movie Name</th>
+        <th>Description</th>
+        <th>Year Releasedr</th>
+        <th>Options</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of allMovies">
+            <td>{{p.movieId}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.desc}}</td>
+            <td>{{p.yor}}</td>
+            <td>
+                <button class="btn btn-outline-secondary" (click)="getEditableMovie(p)">Edit</button>
+                <button class="btn btn-outline-danger" (click)="deleteMovie(p.movieId)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+</table>
+<br><br><br>
+<hr>
+<div class="cards">
+<h2>Update Movie</h2>
+<div class="card" style="margin-right: 500px;">
+
+  <form [formGroup]="editMovieForm" (ngSubmit)="updateProudct()">
+    <label>Movie ID </label>
+    <input type="text" formControlName="movieId" readonly/>
+    <br><br>
+    <label>Name </label>
+    <input type="text" formControlName="name"/>
+    <br><br>
+    <label>Synopsis </label>
+    <input type="text" formControlName="desc"/>
+    <br><br>
+    <label>Year of Release </label>
+    <input type="number" formControlName="yor"/>
+    <br><br>
+    <input type="submit" class="btn btn-primary" value="Update Movie"/>
+  </form>
+</div>
+</div>
+
+
+
+

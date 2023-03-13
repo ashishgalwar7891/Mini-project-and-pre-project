@@ -1,0 +1,15 @@
+<div class="card">
+<h1>Login Form</h1>
+<br>
+<form [formGroup]="loginForm" (ngSubmit)="sendLoginData()" class="form">
+    <label>Email address</label>
+    <input type="text" formControlName="emailId"/>
+    <br>
+    <br>
+    <label>Password</label>
+    <input type="password" formControlName="password"/>
+    <br><br>
+    <button type="submit" style="color: aqua;margin-left: 105px;"(click)='validate()'>login</button>
+</form>
+</div>
+

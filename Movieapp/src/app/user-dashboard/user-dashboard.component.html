@@ -1,0 +1,45 @@
+
+<!-- <h1>Add To Cart</h1> -->
+
+<!-- <button (click)="displayMovies()">see available movies</button> -->
+<h2>Available Movies</h2>
+<button id="b1" (click)='toggleShowTable()' class="btn btn-outline-secondary">see available movies</button>
+<table *ngIf='showTable' class="table-bg" mat-table ="allMovies" matSort>
+    <thead>
+        <th>Movie ID</th>
+        <th>Movie Name</th>
+        <th>Description</th>
+        <th>Year Released</th>
+        <th>Book</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of allMovies">
+            <td>{{p.movieId}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.desc}}</td>
+            <td>{{p.yor}}</td>
+            <td>
+                <button class="btn btn-outline-warning" (click)="addMovieToCart(p)">Book Movie</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+    <div class="card text-bg-info mb-3" *ngFor="let p of allMoviesById" style="max-width: 18rem; height: fit-content;">
+        <h3>name :{{p.name}}</h3>
+        <h4>synopsis :{{p.desc}}</h4>
+        <h3>Year of Release :{{p.yor}}</h3>
+    </div>
+    <h1  id="heading2">Booked Movies</h1>
+    <button  id="b2" style="margin-left: 550px;" (click)='toggleshowtable()' class="btn btn-outline-secondary">see your booked movies</button>
+    <div *ngIf='showtable'>
+
+      <div id="booked" class="container-md" *ngFor="let p of userDetails.movies" style="border: 2px solid rgb(126, 63, 209);">
+        <h3>name:{{p.name}}</h3>
+        <hr>
+        <h4 >synopsis :{{p.desc}}</h4>
+        <h3 >Year of Release :{{p.yor}}</h3>
+        <!-- <button style="margin: 5px;" class="btn btn-outline-danger" (click)="viewdetails">view details</button> -->
+      </div>
+    </div>
+

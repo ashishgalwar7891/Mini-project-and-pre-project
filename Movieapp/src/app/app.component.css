@@ -1,0 +1,24 @@
+.nav1{
+    /* background-color: rgb(92, 92, 238) */
+}
+.navbar-nav{
+  display: inline-flex;
+
+
+}
+a{
+  margin: 5px;
+  padding: 5px;
+}
+#link1{
+  background-color: aliceblue;
+}
+ #link2{
+  background-color: aliceblue;
+
+  /* margin-left: 200px; */
+}
+#link3{
+  margin-left: 1100px;
+  background-color:aliceblue;
+}

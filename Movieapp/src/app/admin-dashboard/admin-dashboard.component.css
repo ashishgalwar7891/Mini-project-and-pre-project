@@ -1,0 +1,27 @@
+h1{
+  margin-left: 550px;
+}
+.cards{
+  margin-left: 520px;
+}
+.table{
+  margin-left: 370px;
+  width: 600px;
+}
+button{
+  margin: 5px;
+}
+#add{
+  margin-left: 55px;
+}
+.card{
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+}
+#adding{
+  justify-content: center;
+  /* margin-left: 320px; */
+  text-align: center;
+  align-items: center;
+}
