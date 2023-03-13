@@ -1,0 +1,19 @@
+
+<div class="container">
+    <h2 style="margin-left:550px;">Log In</h2>
+    <div class="cont1">
+        <form id="forms" [formGroup]="loginForm" (ngSubmit)="sendLoginData()" >
+    <mat-form-field class="n1">
+        <input matInput placeholder="Email" type="email" id="email" formControlName="email" required="email" />
+        <mat-error *ngIf="email.invalid">{{"This Email id required"}}</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="n1">
+        <input matInput placeholder="password" type="password" id="password" formControlName="password" required="password" />
+    </mat-form-field>
+    <br>
+    <button id="b1" color="accent" mat-button mat-raised-button type="submit" (click)="validate()" [disabled]="loginForm.invalid"  value="Login">LogIn</button><span>Or if new User</span>
+    <button id="b1"   mat-button mat-raised-button type="submit"routerLink="/sign-up" >register</button>
+</form>
+</div>
+</div>

@@ -1,0 +1,31 @@
+<button class="logout" color="accent" (click)="logout()">Logout</button>
+<h1 style="margin-left: 550px;">your account details</h1>
+<button style="margin-left:580px" id="hh" color="accent" mat-button mat-raised-button type="submit" routerLink="/home">View available products</button>
+<mat-tab-group id="tabs">
+    <mat-tab label="User Details">
+        <div class="bb">
+        <h1 style="display: none;">{{userDetails|json}}</h1>
+       <Strong>Your Email is</Strong><p>{{userDetails.email}}</p>
+       <Strong>Your username is</Strong><p>{{userDetails.userName}}</p>
+       <strong>Contact number is</strong><p>{{userDetails.mobileNo}}</p>
+       <strong>residential addres</strong><p>{{userDetails.address}}</p></div>
+         </mat-tab>
+    <mat-tab label="Your Product List">
+        <div id="prods" *ngFor="let c of oneProduct" class="card">
+            <img id="images" src="{{c.productUrl}}" class="card-img-top" alt="...">
+            <div class="card-body" >
+              <h5 class="card-title"><p>Product Name: {{c.productName}}</p>
+                <p>Description: {{c.discription}}</p>
+              <h2>Price: {{c.price}} ₹</h2>
+              <button class="btn btn-outline-info" id="remove" (click) = "deleteP(c)">remove from cart</button>
+              </h5>
+              <!-- <p class="card-text"></p> -->
+            </div>
+          </div>
+         </mat-tab>
+    <!-- <mat-tab label="Third"> </mat-tab> -->
+  </mat-tab-group>
+
+  <!-- <button (click)="getOneProduct()">click</button>  -->
+
+

@@ -1,0 +1,37 @@
+<div class="container">
+    <h2 style="margin-left:550px">Registration From</h2>
+    <div class="cont1">
+    <form id="form2" [formGroup]="signupForm" (ngSubmit)="sendSignupData()">
+       <mat-form-field appearance="outline" class="n1" >
+     <Strong>Enter a username</Strong>  <input matInput placeholder="name" name="userName" maxlength="5"  type="text" class="nn" formControlName="userName" name="userName" required />
+      <!-- <mat-error *ngIf="signupForm.userName.untouched">letter should be uppercase</mat-error> -->
+</mat-form-field>
+    <br>
+        <mat-form-field appearance="outline" class="n1">
+            <Strong>Enter EmailId</Strong>   <input matInput placeholder="e.g:name123@gmail.com" type="email" id="email"  formControlName="email" required />
+            <mat-error *ngIf= "email.untouched" >{{"This Email address required"}}</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline" class="n1">
+            <Strong>Enter Password</Strong>   <input matInput placeholder="enter strong password" type="password"  class="nn" formControlName="password" required="password" pattern=".{8,}"/>
+            <mat-error *ngIf= "signupForm.value.password" > password must be 8 char long.</mat-error>
+            <br>
+
+        </mat-form-field>
+        <br>
+          <mat-form-field appearance="outline" class="n1">
+            <Strong>Enter your mobile no</Strong>  <input matInput placeholder="1236547896" type="text"  class="nn" formControlName="mobileNo" required="MobileNo" />
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline" class="n1">
+            <Strong>Enter your address</Strong> <input matInput placeholder="cityname" type="text" id="add"   formControlName="address" required="address" />
+            <!-- <input type="text" -->
+                            <!-- size="65" name="Address" /> -->
+        </mat-form-field>
+        <br>
+        <button id="b1" color="accent" mat-button mat-raised-button type="submit" value="SignUp">Submit</button>
+        <!-- <button id="b1"   mat-button mat-raised-button type="submit"routerLink="/sign-up" >register</button> -->
+        <button id="b2"  mat-button mat-raised-button type="submit" routerLink="/log-in">login</button>
+    </form>
+    </div>
+    </div>

@@ -1,0 +1,17 @@
+<button class="logout" color="accent" (click)="logout()">Logout</button>
+<div class="container">
+  <button id="hh" mat-button mat-raised-button type="submit" routerLink="/userView">My Account</button>
+<div class="card1">
+  <div *ngFor="let a of allproducts" class="card">
+    <img src="{{a.productUrl}}" class="card-img-top" alt="...">
+    <div class="card-body" >
+      <h5 class="card-title"><p>Product Name: {{a.productName}}</p>
+        <p>Description: {{a.discription}}</p>
+        <h2> Price: {{a.price}}₹ </h2>
+      </h5>
+      <p class="card-text"></p>
+      <a class="btn btn-primary"(click)="addPProductToCart(a)">Add To cart</a>
+    </div>
+  </div>
+</div>
+</div>
